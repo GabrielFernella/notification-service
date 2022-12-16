@@ -9,3 +9,4 @@
 3. npx prisma studio
 
 s
+36:30
