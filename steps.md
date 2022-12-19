@@ -8,5 +8,5 @@
 2. npx prisma migrate dev (Rodar a migrations e criar de fato a tabela)
 3. npx prisma studio
 
-s
-36:30
+Aula 03
+44:30
