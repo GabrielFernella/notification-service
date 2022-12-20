@@ -20,6 +20,12 @@ export class InMemoryNotificationsRepository
     return notification;
   }
 
+  async findManyByRecipientId(recipientId: string): Promise<Notification[]> {
+    return this.notifications.filter(
+      (index) => recipientId === index.recipientId,
+    );
+  }
+
   async save(notification: Notification): Promise<void> {
     const notificationIndex = this.notifications.findIndex(
       (index) => index.id === notification.id,
@@ -28,5 +34,11 @@ export class InMemoryNotificationsRepository
     if (notificationIndex >= 0) {
       this.notifications[notificationIndex] = notification;
     }
+  }
+
+  async countManyByRecipientId(recipientId: string): Promise<number> {
+    return this.notifications.filter(
+      (index) => index.recipientId === recipientId,
+    ).length;
   }
 }

@@ -9,4 +9,4 @@
 3. npx prisma studio
 
 Aula 03
-44:30
+1:05:00
